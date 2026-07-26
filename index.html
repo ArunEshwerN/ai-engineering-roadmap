@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The AI Engineer Roadmap — zero to depth</title>
+<meta name="description" content="A complete, verified curriculum from programming fundamentals to LLMs, RAG, agents and LangGraph. Every resource rated free vs paid, with an honest verdict on each.">
+<meta property="og:title" content="The AI Engineer Roadmap">
+<meta property="og:description" content="Zero to depth: 11 phases, ~1,100 hours, every resource verified and rated free vs paid.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">The AI Engineer <span>Roadmap</span></div>
+    <div class="grow"></div>
+    <div class="progress-pill" title="Your progress — saved in this browser">
+      <svg class="ring" viewBox="0 0 24 24" aria-hidden="true">
+        <circle class="bg" cx="12" cy="12" r="9"></circle>
+        <circle class="fg" id="ring" cx="12" cy="12" r="9" stroke-dasharray="56.5" stroke-dashoffset="56.5"></circle>
+      </svg>
+      <span><b id="pct">0%</b> <span class="lbl">complete</span></span>
+    </div>
+    <button class="iconbtn" id="expandAll" title="Expand / collapse all phases" aria-label="Expand or collapse all phases">⤢</button>
+    <button class="iconbtn" id="theme" title="Toggle light / dark theme" aria-label="Toggle theme">◐</button>
+  </div>
+  <div class="scrollbar-line" id="scrollLine"></div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="wrap">
+    <div class="eyebrow"><span class="dot"></span> Verified 27 July 2026</div>
+    <h1 class="title">From zero to <em>the person who actually knows how this works</em></h1>
+    <p class="lede">Eleven phases. Programming fundamentals through LLMs, RAG, agents and LangGraph — and past them.
+      Every resource here was <strong>checked live</strong>, rated free versus paid, with an honest verdict on which to take.</p>
+    <p class="sub">Built for a Decision Science team: causal inference and experimentation sit alongside the AI track, because that is where your work actually lands.</p>
+
+    <div class="stats">
+      <div class="stat"><b>11</b><small>Phases</small></div>
+      <div class="stat"><b id="modCount">0</b><small>Modules</small></div>
+      <div class="stat"><b id="resCount">0</b><small>Resources</small></div>
+      <div class="stat"><b id="freePct">0%</b><small>Free</small></div>
+      <div class="stat"><b>~1.0k</b><small>Hours</small></div>
+      <div class="stat"><b>~$270</b><small>Total spend</small></div>
+    </div>
+
+    <div class="cta-row">
+      <a class="btn primary" href="#phases">Start at Phase 0 →</a>
+      <a class="btn" href="ROADMAP.md">Read as a document</a>
+      <a class="btn" href="#spend">What's worth paying for</a>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Read this before anything else</h2>
+      <p>Three things that decide whether this roadmap works for you or becomes another list of bookmarks.</p>
+    </div>
+
+    <div class="callout">
+      <h3>The honest verdict on paid content</h3>
+      <p>Most of the best AI education on earth is free — and that is not a consolation prize. Karpathy, Stanford CS336,
+         Hugging Face, LangChain Academy and Anthropic Academy are genuinely the best resources in existence for their
+         topics, and they cost nothing.</p>
+      <p><b>Spend money on exactly four categories:</b></p>
+      <ol>
+        <li><b>Books you will return to for years.</b> ~$45–65 each, one-time. Best value in the entire list.</li>
+        <li><b>One structured course when you need momentum</b>, not knowledge — usually early, when self-direction is hardest.</li>
+        <li><b>Compute.</b> Colab Pro or ~$50 of API credits will teach you more than a $200 course. The single most underrated line item.</li>
+        <li><b>Nothing else.</b></li>
+      </ol>
+    </div>
+
+    <div class="callout">
+      <h3>The three habits that separate you from people who "did a course"</h3>
+      <ol>
+        <li><b>Build the thing before you read about the thing.</b> Struggle first, then read. The reading lands ten times harder against a problem you have already hit.</li>
+        <li><b>Write it down publicly.</b> A repo, a blog, notes in your team wiki. If you cannot explain it in writing, you do not know it — and this is exactly what makes your team notice.</li>
+        <li><b>Read one paper a week from Phase 5 onward.</b> Not to understand every equation — to build tolerance for primary sources. Most engineers never do this. It compounds absurdly.</li>
+      </ol>
+    </div>
+
+    <div class="callout">
+      <h3>The failure mode to avoid</h3>
+      <p>Completing forty courses and being unable to build anything unassisted. The defence is the <b>Build</b> box in
+         every module. If you skip the builds, this roadmap is worthless. If you do only the builds and half the reading,
+         you will be fine.</p>
+      <p><b>On unpredictable hours:</b> never break the chain on Phase 4.1 (Karpathy) or Phase 8.3 (LangGraph) — those two
+         need continuity. In zero-hour weeks, read; reading survives interruption, coding does not. And it is entirely
+         reasonable to pull Phase 8.3 forward out of order, because your job needs it now.</p>
+    </div>
+  </div>
+</section>
+
+<div class="controls" id="controls">
+  <div class="wrap controls-inner">
+    <div class="search">
+      <input type="search" id="q" placeholder="Search modules, topics, resources…  (press /)" aria-label="Search the roadmap">
+    </div>
+    <div class="chips" role="group" aria-label="Filters">
+      <button class="chip free" id="fFree" aria-pressed="false">Free only</button>
+      <button class="chip paid" id="fPaid" aria-pressed="false">Paid only</button>
+      <button class="chip" id="fTodo" aria-pressed="false">Unfinished</button>
+      <button class="chip" id="reset">Reset</button>
+    </div>
+  </div>
+</div>
+
+<section class="section" id="phases">
+  <div class="wrap">
+    <div class="rail" id="rail"></div>
+    <div class="empty" id="empty" style="display:none">No modules match that search.</div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section class="section" id="projects">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Eight projects that prove it</h2>
+      <p>Build all eight and you are demonstrably not a fresher anymore. Write each one up — a real README, a short post,
+         a diagram. The write-up is half the value, and it is the half your team actually sees.</p>
+    </div>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>#</th><th>Project</th><th>Phase</th><th>What it proves</th></tr></thead>
+        <tbody id="projTable"></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section class="section" id="spend">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Total spend: the honest accounting</h2>
+      <p>Realistic total: <b>~$270</b> for books and compute, up to <b>~$430</b> with the optional items. For a year of
+         education that takes you from zero to genuinely competent, that is an absurd bargain — and it is only possible
+         because the best material in this field happens to be free.</p>
+    </div>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Item</th><th>Cost</th><th>Verdict</th><th>Why</th></tr></thead>
+        <tbody id="spendTable"></tbody>
+      </table>
+    </div>
+    <div class="neverbuy">
+      <h3>Do not spend money on</h3>
+      <ul id="neverBuy"></ul>
+    </div>
+  </div>
+</section>
+
+<section class="section closing">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>What "knowing everything" actually looks like</h2>
+      <p>Not memorising every paper. Nobody knows everything in this field — it moves too fast. The people who look like
+         they do are the ones with strong foundations who close gaps quickly and publicly.</p>
+    </div>
+    <ul>
+      <li><span class="mk">01</span><span>You can <b>implement the core</b> of anything you use, from scratch, at least once.</span></li>
+      <li><span class="mk">02</span><span>You can say <b>why</b> a design choice was made, and what the alternative was.</span></li>
+      <li><span class="mk">03</span><span>You know where each thing <b>fails</b>, and you say so before someone else finds out.</span></li>
+      <li><span class="mk">04</span><span>You <b>measure</b>. You show numbers. You do not say "it seems better."</span></li>
+      <li><span class="mk">05</span><span>You can <b>disagree with a popular opinion</b> and defend it — the way you would hold both the Anthropic and Cognition views on multi-agent systems at once.</span></li>
+      <li><span class="mk">06</span><span>You say <b>"I don't know, let me find out"</b> quickly — and then you actually find out.</span></li>
+    </ul>
+    <p style="margin-top:22px;color:var(--ink-3);font-size:.94rem;max-width:70ch">
+      That last one is the whole thing. Foundations are what this roadmap buys you. The closing-gaps-quickly part is a
+      habit, and you start it today.
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-row">
+    <div>Progress is saved in this browser only — nothing is uploaded anywhere.</div>
+    <div>Verified 27 July 2026 · <a href="ROADMAP.md">ROADMAP.md</a></div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
