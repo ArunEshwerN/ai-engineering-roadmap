@@ -81,5 +81,16 @@ Progress checkboxes are stored in `localStorage` — nothing is uploaded anywher
 
 ---
 
+## Companion roadmap
+
+**[The Web Engineer Roadmap](https://github.com/ArunEshwerN/web-engineering-roadmap)** — the same
+treatment for web development: how the web works → HTML/CSS → JavaScript → TypeScript → React →
+Next.js → backend → production.
+
+The two combine well: someone who can architect an agent system *and* ship the production Next.js
+app around it is genuinely rare. The [Vercel AI SDK](https://ai-sdk.dev/) is the bridge.
+
+---
+
 *Resources verified 27 July 2026. Prices are approximate USD and change. If a link rots, the topic
 still stands — search the title.*
